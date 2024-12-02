@@ -50,5 +50,6 @@ let package = Package(
             ],
             path: "Framework/SPMTemplate"
         ),
-    ]
+    ],
+    cxxLanguageStandard: .cxx11
 )
