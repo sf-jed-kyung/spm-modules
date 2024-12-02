@@ -40,7 +40,10 @@ let package = Package(
                 .target(name: "SPMTemplate"),
                 .product(name: "SPMChat", package: "spm-chat")
             ],
-            path: "Framework/SPMUIKit"
+            path: "Framework/SPMUIKit",
+            resources: [
+               .copy("Resources/PrivacyInfo.xcprivacy"),
+            ]
         ),
         
         .target(
@@ -48,7 +51,10 @@ let package = Package(
             dependencies: [
                 .product(name: "SPMChat", package: "spm-chat")
             ],
-            path: "Framework/SPMTemplate"
+            path: "Framework/SPMTemplate",
+            resources: [
+               .copy("Resources/PrivacyInfo.xcprivacy"),
+            ]
         ),
     ],
     cxxLanguageStandard: .cxx11
