@@ -39,7 +39,7 @@ let package = Package(
                 .target(name: "SPMTemplate"),
                 .product(name: "SPMChat", package: "spm-chat")
             ],
-            path: "Framework/Dependency"
+            path: "Framework/SPMUIKit"
         ),
         
         .target(
@@ -47,7 +47,7 @@ let package = Package(
             dependencies: [
                 .product(name: "SPMChat", package: "spm-chat")
             ],
-            path: "Framework/Dependency"
+            path: "Framework/SPMTemplate"
         ),
     ]
 )
