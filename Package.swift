@@ -8,20 +8,16 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SPMChat",
-            targets: ["SPMChatTarget"]),
-        .library(
             name: "SPMUIKit",
-            targets: ["SPMUIKit"]),
+            targets: ["SPMUIKitTarget"]),
 //        .library(
 //            name: "SPMTemplate",
 //            targets: ["SPMTemplate"]),
     ],
     dependencies: [
         .package(
-            name: "SPMChat",
             url: "https://github.com/sf-jed-kyung/spm-chat",
-            from: "1.0.1"
+            from: "1.0.2"
         ),
     ],
     targets: [
@@ -32,14 +28,14 @@ let package = Package(
 //        ),
         .binaryTarget(
             name: "SPMUIKit",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.0/SPMUIKit.xcframework.zip",
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.1/SPMUIKit.xcframework.zip",
             checksum: "2333a1e69ba4d32db656bd13cac6fe49886f3741fae76437d8f9eeebce1c1704"
         ),
         .target(
-            name: "SPMChatTarget",
+            name: "SPMUIKitTarget",
             dependencies: [
-                .target(name: "SPMChat"),
-                .product(name: "SPMChat", package: "SPMChat")
+                .target(name: "SPMUIKit"),
+                .product(name: "SPMChat", package: "spm-chat")
             ],
             path: "Framework/Dependency"
         ),
