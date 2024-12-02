@@ -33,7 +33,7 @@ let package = Package(
         .binaryTarget(
             name: "SPMUIKit",
             url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.0/SPMUIKit.xcframework.zip",
-            checksum: "2263767c49e2b51aa1368362269178fe8096f9152e7c00024ab8382960a2f4e2"
+            checksum: "2333a1e69ba4d32db656bd13cac6fe49886f3741fae76437d8f9eeebce1c1704"
         ),
         .target(
             name: "SPMChatTarget",
