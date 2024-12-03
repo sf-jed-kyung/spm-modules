@@ -14,39 +14,30 @@ let package = Package(
         .library(
             name: "SPMTemplatePackage",
             targets: ["SPMTemplateTarget"]),
-        .library(
-            name: "SPMOpenChannel",
-            targets: ["SPMOpenChannelTarget"]),
-        .library(
-            name: "SPMGroupChannel",
-            targets: ["SPMGroupChannelTarget"]),
-        .library(
-            name: "SPMBusinessMessaging",
-            targets: ["SPMBusinessMessagingTarget"]),
     ],
     dependencies: [
         .package(
             url: "https://github.com/sf-jed-kyung/spm-chat",
-            from: "1.0.3"
+            from: "1.0.4"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "SPMTemplate",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.14/SPMTemplate.xcframework.zip",
-            checksum: "577162bfe0a691828a8008ee3875e69b71924e5d2ba1ebe6456f768a24aa1842"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.15/SPMTemplate.xcframework.zip",
+            checksum: "6352c575e3dff227e66e66030a5ce86a177e3eb77fe3cdc59377be0f0a2357a4"
         ),
         .binaryTarget(
             name: "SPMUIKit",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.14/SPMUIKit.xcframework.zip",
-            checksum: "29c2e36730d77361bc67838271d15d90aa65719268592636bc1ffac721b5ce82"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.15/SPMUIKit.xcframework.zip",
+            checksum: "ea6c96a0a76af71356e693faf6e85953aa1deb62c6937fbf293bb206ab47d4b7"
         ),
         
         .target(
             name: "SPMUIKitTarget",
             dependencies: [
                 .target(name: "SPMUIKit"),
-                .target(name: "SPMTemplate"),
+//                .target(name: "SPMTemplate"),
                 .product(name: "SPMChat", package: "spm-chat")
             ],
             path: "Framework/SPMUIKit",
@@ -62,39 +53,6 @@ let package = Package(
                 .product(name: "SPMChat", package: "spm-chat")
             ],
             path: "Framework/SPMTemplate",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
-        
-        .target(
-            name: "SPMOpenChannelTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMOpenChannel",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
-        
-        .target(
-            name: "SPMGroupChannelTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMGroupChannel",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
-        
-        .target(
-            name: "SPMBusinessMessagingTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMBusinessMessaging",
             resources: [
                .copy("Resources/PrivacyInfo.xcprivacy"),
             ]
