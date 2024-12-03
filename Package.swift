@@ -14,15 +14,15 @@ let package = Package(
         .library(
             name: "SPMTemplatePackage",
             targets: ["SPMTemplateTarget"]),
-        .library(
-            name: "SPMOpenChannel",
-            targets: ["SPMOpenChannelTarget"]),
-        .library(
-            name: "SPMGroupChannel",
-            targets: ["SPMGroupChannelTarget"]),
-        .library(
-            name: "SPMBusinessMessaging",
-            targets: ["SPMBusinessMessagingTarget"]),
+//        .library(
+//            name: "SPMOpenChannel",
+//            targets: ["SPMOpenChannelTarget"]),
+//        .library(
+//            name: "SPMGroupChannel",
+//            targets: ["SPMGroupChannelTarget"]),
+//        .library(
+//            name: "SPMBusinessMessaging",
+//            targets: ["SPMBusinessMessagingTarget"]),
     ],
     dependencies: [
         .package(
@@ -67,37 +67,37 @@ let package = Package(
             ]
         ),
         
-        .target(
-            name: "SPMOpenChannelTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMOpenChannel",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
-        
-        .target(
-            name: "SPMGroupChannelTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMGroupChannel",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
-        
-        .target(
-            name: "SPMBusinessMessagingTarget",
-            dependencies: [
-                .product(name: "SPMChat", package: "spm-chat")
-            ],
-            path: "Framework/SPMBusinessMessaging",
-            resources: [
-               .copy("Resources/PrivacyInfo.xcprivacy"),
-            ]
-        ),
+//        .target(
+//            name: "SPMOpenChannelTarget",
+//            dependencies: [
+//                .product(name: "SPMChat", package: "spm-chat")
+//            ],
+//            path: "Framework/SPMOpenChannel",
+//            resources: [
+//               .copy("Resources/PrivacyInfo.xcprivacy"),
+//            ]
+//        ),
+//        
+//        .target(
+//            name: "SPMGroupChannelTarget",
+//            dependencies: [
+//                .product(name: "SPMChat", package: "spm-chat")
+//            ],
+//            path: "Framework/SPMGroupChannel",
+//            resources: [
+//               .copy("Resources/PrivacyInfo.xcprivacy"),
+//            ]
+//        ),
+//        
+//        .target(
+//            name: "SPMBusinessMessagingTarget",
+//            dependencies: [
+//                .product(name: "SPMChat", package: "spm-chat")
+//            ],
+//            path: "Framework/SPMBusinessMessaging",
+//            resources: [
+//               .copy("Resources/PrivacyInfo.xcprivacy"),
+//            ]
+//        ),
     ]
 )
