@@ -9,10 +9,10 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SPMUIKit",
+            name: "SPMUIKitPackage",
             targets: ["SPMUIKitTarget"]),
         .library(
-            name: "SPMTemplate",
+            name: "SPMTemplatePackage",
             targets: ["SPMTemplateTarget"]),
         .library(
             name: "SPMOpenChannel",
