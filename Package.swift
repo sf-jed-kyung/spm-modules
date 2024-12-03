@@ -18,26 +18,26 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/sf-jed-kyung/spm-chat",
-            from: "1.0.4"
+            from: "1.0.6"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "SPMTemplate",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.22/SPMTemplate.xcframework.zip",
-            checksum: "1bc70f2a7f13782e18e1070248d09265f0cb79ea0bca217f95a2ef694aa5bcc6"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.23/SPMTemplate.xcframework.zip",
+            checksum: "bf561cb2a7c2c1c8a38ba59836a80a88e2e58216a86b3d7c974165484eaa3e79"
         ),
         .binaryTarget(
             name: "SPMUIKit",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.22/SPMUIKit.xcframework.zip",
-            checksum: "01d8b42c3a52445c17a8f32765e4d7b4fe75b363413d2dcb93c6a001c638709b"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.23/SPMUIKit.xcframework.zip",
+            checksum: "facf6181fd8dec5f914831b3628dab1c1734b0ecfc6fb41a40dc6a30f2f31b89"
         ),
         
         .target(
             name: "SPMUIKitTarget",
             dependencies: [
                 .target(name: "SPMUIKit"),
-//                .target(name: "SPMTemplate"),
+                .target(name: "SPMTemplate"),
                 .product(name: "SPMChat", package: "spm-chat")
             ],
             path: "Framework/SPMUIKit",
