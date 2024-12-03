@@ -58,7 +58,7 @@ let package = Package(
         .target(
             name: "SPMTemplateTarget",
             dependencies: [
-                .target(name: "SPMTemplate"),
+//                .target(name: "SPMTemplate"),
                 .product(name: "SPMChat", package: "spm-chat")
             ],
             path: "Framework/SPMTemplate",
