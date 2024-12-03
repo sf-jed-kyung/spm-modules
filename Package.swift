@@ -24,13 +24,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SPMTemplate",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.20/SPMTemplate.xcframework.zip",
-            checksum: "6352c575e3dff227e66e66030a5ce86a177e3eb77fe3cdc59377be0f0a2357a4"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.21/SPMTemplate.xcframework.zip",
+            checksum: "5b60b247dc80aaea80b8b421d3f8e989ea67b5e3411e5c479dd0693ce8170cc6"
         ),
         .binaryTarget(
             name: "SPMUIKit",
-            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.20/SPMUIKit.xcframework.zip",
-            checksum: "ea6c96a0a76af71356e693faf6e85953aa1deb62c6937fbf293bb206ab47d4b7"
+            url: "https://github.com/sf-jed-kyung/spm-modules/releases/download/1.0.21/SPMUIKit.xcframework.zip",
+            checksum: "769d7888556760b64b20eb2e805baac6674362b2839f74e5d7108b4b8c173953"
         ),
         
         .target(
